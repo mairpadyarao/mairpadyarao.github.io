@@ -254,20 +254,11 @@ li {
     font-weight: 500;
 }
 
-/* Specific styling for clickable certifications in the grid */
-.clickable-cert {
-    text-decoration: none;
-    color: var(--text);
-    transition: all 0.3s ease;
+/* Styling for non-clickable certification tags */
+.cert-tag {
     background: #ffffff;
     border: 1px solid #eee;
-}
-
-.clickable-cert:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.1);
+    color: var(--text);
 }
 
 .skill-tag small {
