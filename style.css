@@ -4,6 +4,7 @@
     --accent: #007AFF;
     --secondary: #666666;
     --card-bg: #f9f9fb;
+    --gold: #D4AF37;
 }
 
 * {
@@ -178,8 +179,11 @@ li {
     font-size: 0.95rem;
 }
 
-li strong {
-    color: var(--text);
+/* Skills Wrapper */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
 }
 
 .skill-grid {
@@ -194,6 +198,45 @@ li strong {
     border-radius: 30px;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.skill-tag small {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--secondary);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.language {
+    border-left: 3px solid var(--accent);
+}
+
+.license {
+    border-left: 3px solid #34C759;
+}
+
+/* Education Specifics */
+.distinction {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dotted #ccc;
+}
+
+.distinction p {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-top: 0.4rem;
+}
+
+.badge {
+    background: rgba(212, 175, 55, 0.1);
+    color: #996515;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 footer {
@@ -216,6 +259,11 @@ footer {
 
     .stats-bar {
         gap: 2rem;
+    }
+
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
     .card-header {
