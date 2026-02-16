@@ -68,9 +68,14 @@ nav .container {
     color: white !important;
     padding: 0.5rem 1rem;
     border-radius: 6px;
+    transition: 0.3s;
 }
 
-/* Hero Section: FIXED for side-by-side placement */
+.btn-cv:hover {
+    background: var(--accent);
+}
+
+/* Hero Section */
 .hero {
     padding: 8rem 0 6rem 0;
 }
@@ -78,7 +83,6 @@ nav .container {
 .hero-wrapper {
     display: flex;
     align-items: flex-start;
-    /* Aligns items to the top */
     justify-content: space-between;
     gap: 4rem;
 }
@@ -96,7 +100,6 @@ nav .container {
 .hero-image img {
     width: 100%;
     max-width: 380px;
-    /* Reduced slightly to prevent pushing text */
     height: auto;
     border-radius: 20px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
