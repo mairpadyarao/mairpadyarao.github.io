@@ -70,14 +70,15 @@ nav .container {
     border-radius: 6px;
 }
 
-/* Hero Section: Grid layout ensures image is NEXT to the text units */
+/* Hero Section: FIXED for side-by-side placement */
 .hero {
     padding: 8rem 0 6rem 0;
 }
 
 .hero-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    /* Aligns items to the top */
     justify-content: space-between;
     gap: 4rem;
 }
@@ -86,7 +87,6 @@ nav .container {
     flex: 1.5;
 }
 
-/* Text unit occupies more space */
 .hero-image {
     flex: 1;
     display: flex;
@@ -95,10 +95,9 @@ nav .container {
 
 .hero-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
+    /* Reduced slightly to prevent pushing text */
     height: auto;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
 }
