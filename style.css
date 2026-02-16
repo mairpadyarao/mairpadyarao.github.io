@@ -120,7 +120,6 @@ nav .container {
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     display: block;
-    /* Helps image rendering */
 }
 
 h1 {
@@ -211,6 +210,10 @@ h2 {
     color: var(--accent);
     margin-bottom: 0.8rem;
     font-size: 0.95rem;
+}
+
+.location {
+    display: inline;
 }
 
 .project-tag {
@@ -368,7 +371,6 @@ footer {
 @media (max-width: 850px) {
     :root {
         --nav-height: 140px;
-        /* Accounts for wrapped links */
     }
 
     nav {
@@ -424,5 +426,18 @@ footer {
         margin-top: 4px;
         border-left: 2px solid var(--accent);
         padding-left: 8px;
+    }
+
+    /* FIX FOR LOCATION SPLITTING */
+    .company {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location {
+        display: block;
+        margin-top: 2px;
+        font-weight: 500;
+        color: var(--secondary);
     }
 }
