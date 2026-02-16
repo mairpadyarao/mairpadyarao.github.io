@@ -239,6 +239,38 @@ li {
     text-transform: uppercase;
 }
 
+/* Hobby Section Styles */
+.hobby-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.hobby-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: 0.2s;
+}
+
+.hobby-card:hover {
+    border-color: var(--accent);
+}
+
+.hobby-icon {
+    font-size: 1.2rem;
+}
+
+.hobby-card p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
 footer {
     background: #f9f9fb;
     padding: 4rem 0;
@@ -273,5 +305,9 @@ footer {
     .footer-content {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .hobby-card {
+        width: 100%;
     }
 }
