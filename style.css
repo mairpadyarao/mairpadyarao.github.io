@@ -35,7 +35,6 @@ section {
     margin-bottom: 5rem;
     scroll-margin-top: var(--nav-height);
     position: relative;
-    /* Ensures visibility */
     z-index: 1;
 }
 
@@ -69,7 +68,6 @@ nav .container {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    /* Allows links to wrap on mobile */
     justify-content: center;
     gap: 0.8rem;
 }
@@ -91,11 +89,6 @@ nav .container {
     text-decoration: none;
     font-weight: 600;
     display: inline-block;
-    transition: background 0.2s ease;
-}
-
-.btn-cv:hover {
-    background: var(--accent);
 }
 
 /* Hero Section */
@@ -109,16 +102,25 @@ nav .container {
     gap: 3rem;
 }
 
+.hero-content {
+    flex: 1.5;
+}
+
 .hero-image {
     flex: 1;
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .hero-image img {
     width: 100%;
     max-width: 320px;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    display: block;
+    /* Helps image rendering */
 }
 
 h1 {
@@ -365,8 +367,8 @@ footer {
 /* --- MOBILE OPTIMIZATIONS --- */
 @media (max-width: 850px) {
     :root {
-        --nav-height: auto;
-        /* Allow nav to grow */
+        --nav-height: 140px;
+        /* Accounts for wrapped links */
     }
 
     nav {
@@ -375,7 +377,6 @@ footer {
 
     nav .container {
         flex-direction: column;
-        /* Stack logo, links, and CV btn */
         text-align: center;
     }
 
@@ -392,12 +393,13 @@ footer {
     }
 
     .hero-image {
+        justify-content: center;
         text-align: center;
+        width: 100%;
     }
 
     .hero-image img {
-        max-width: 280px;
-        /* Reduced for phone screens */
+        max-width: 250px;
     }
 
     h1 {
